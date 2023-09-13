@@ -5,11 +5,11 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--cpuexecutioncap", "70"]
   end
 
-  config.vm.define :pg13_systemRH7 do |server|
+  config.vm.define :pg13_systemRH8 do |server|
 #   server.vm.box = "bento/centos-6.10"
 #   server.vm.box = "clouddood/RH7.5_baserepo"
-    server.vm.box = "clouddood/RH7.5_baserepo"
-    server.vm.host_name = "pg13-systemRH7.test.dev"
+    server.vm.box = "clouddood/RH8.8_infra"
+    server.vm.host_name = "pg13-systemRH8.test.dev"
 
     server.ssh.forward_agent = true
 
